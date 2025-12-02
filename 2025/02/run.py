@@ -4,7 +4,7 @@ with open("OwO.txt") as f:
 
 invalid_codes = []
 
-def format_numbers(code):
+def format_numbers(code: str):
     return code.split('-')
 
 def is_invalid(code: str):
@@ -18,8 +18,6 @@ def awnser(list: list):
         awnser += int(i)
     return awnser
 
-
-
 for line in lines:
     s, e = format_numbers(line)
     n1 = int(s)
@@ -28,5 +26,4 @@ for line in lines:
         is_invalid(str(j))
 
 
-print(format_numbers('2157315-2351307')[0])
 print(awnser(invalid_codes))
